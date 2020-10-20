@@ -90,6 +90,8 @@ const requestGithubUserAccount = async (token) =>
   }).then((res) => res.json());
 
 const server = new GraphQLServer({ typeDefs, resolvers });
-server.start(() => console.log("Server is running on localhost:4000"));
+server.start({ port: process.env.PORT || 4000, endpoint: "/graphql" }, () =>
+  console.log("Server is running on localhost:4000")
+);
 
 //https://github.com/login/oauth/authorize?client_id=d3b7ac8c153a6f360536&scope=user
