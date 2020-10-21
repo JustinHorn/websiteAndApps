@@ -27,7 +27,6 @@ const typeDefs = `
 
 const resolvers = {
   Query: {
-    hello: (_, { name }) => `Hello ${name || "World"}`,
     githubLoginUrl: () =>
       `https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=user`,
   },
@@ -48,6 +47,11 @@ const resolvers = {
         githubToken: githubUser.access_token,
         avatar: githubUser.avatar_url,
       };
+
+      // create user and their token with jsonwebtoken in case they don't exist
+
+      //....
+
       // 3. Return user data and their token
       return { user: currentUser, token: "myToken" };
     },
@@ -57,11 +61,8 @@ const resolvers = {
 const requestGithubUser = async (credentials) => {
   const res = await requestGithubToken(credentials);
 
-  console.log(res);
   const { access_token } = res;
   const githubUser = await requestGithubUserAccount(access_token);
-  console.log("user");
-  console.log(githubUser);
   return { ...githubUser, access_token };
 };
 
@@ -79,6 +80,11 @@ const requestGithubToken = async (credentials) =>
       throw new Error(JSON.stringify(error));
     });
 
+const server = new GraphQLServer({ typeDefs, resolvers });
+server.start({ port: process.env.PORT || 4000, endpoint: "/graphql" }, () =>
+  console.log("Server is running on localhost:4000")
+);
+
 const requestGithubUserAccount = async (token) =>
   await fetch(`https://api.github.com/user?access_token=${token}`, {
     method: "POST",
@@ -88,10 +94,3 @@ const requestGithubUserAccount = async (token) =>
       Accept: "application/json",
     },
   }).then((res) => res.json());
-
-const server = new GraphQLServer({ typeDefs, resolvers });
-server.start({ port: process.env.PORT || 4000, endpoint: "/graphql" }, () =>
-  console.log("Server is running on localhost:4000")
-);
-
-//https://github.com/login/oauth/authorize?client_id=d3b7ac8c153a6f360536&scope=user
