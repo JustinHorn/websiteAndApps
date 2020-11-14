@@ -1,0 +1,59 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  padding: 20px;
+}
+
+.page section {
+  padding: 20px 0;
+}
+
+.card {
+  min-width: 400px;
+  margin: 10px;
+}
+
+.card .info {
+  width: 100%;
+}
+
+.info h2 {
+  padding: 0;
+  margin: 0.1rem 0;
+}
+
+.card .info aside {
+  padding: 20px;
+}
+
+.cardbuttons {
+  display: flex;
+  justify-content: space-between;
+}
+.data {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cost {
+  width: fit-content;
+}
+
+.tag {
+  background-color: lightcoral;
+  border-radius: 10%;
+  font-size: 0.8rem;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.info h5 {
+  margin: 0.2rem 0;
+}

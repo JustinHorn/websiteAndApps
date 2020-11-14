@@ -1,65 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Button from "@material-ui/core/Button";
+
+import Link from "next/Link";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <main className={styles.center}>
+      <div className={styles.intro}>
+        <div className={styles.img4x4grid}>
+          <img src="images/curiosity.webp" />
+          <img src="images/trust.webp" />
+          <img src="images/education.webp" />
+          <img src="images/help.webp" />
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        <aside>
+          <h3 className="spaced">
+            You are ready for your individual relocation adventure? <br />
+            Nice to meet you!
+          </h3>
+          <span className="main">
+            <p>
+              HYMT is your trusted partner for relocation and immigration
+              services in Germany.
+            </p>
+            <p>
+              As a service and booking platform, we will accompany you from the
+              very beginning to ensure that you arrive safely and satisfied. In
+              addition, we offer you a wealth of articles, tutorials, guides and
+              other valuable information for your relocation.
+            </p>
+            <p>
+              You need professional support on site? With HYMT you will find
+              exactly the right relocation agency in your city and can move into
+              your new home without any worries.
+            </p>
+          </span>
+          <h4 className="footer">​HYMT - Simply coming home.</h4>
+        </aside>
+      </div>
+      <Link href="/form">
+        <Button variant="contained" color="primary">
+          I want to relocate
+        </Button>
+      </Link>
+    </main>
+  );
 }
