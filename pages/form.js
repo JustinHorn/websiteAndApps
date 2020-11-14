@@ -12,7 +12,7 @@ import FormLabel from "@material-ui/core/FormLabel";
 
 import Button from "@material-ui/core/Button";
 
-import Link from "next/Link";
+import Link from "next/link";
 
 const Form = () => {
   const cD = getCurrentDate();
