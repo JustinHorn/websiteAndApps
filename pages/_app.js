@@ -1,7 +1,7 @@
 import "styles/globals.css";
 import Head from "next/head";
 
-import Link from "next/Link";
+import Link from "next/link";
 
 import Button from "@material-ui/core/Button";
 

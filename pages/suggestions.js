@@ -1,6 +1,6 @@
 import styles from "styles/Suggestions.module.css";
 
-import Link from "next/Link";
+import Link from "next/link";
 
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
