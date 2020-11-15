@@ -55,7 +55,7 @@ const Profile = () => {
         </Card>
         <Card className={styles.card}>
           <CardContent>
-            <h4>Legal Help</h4>
+            <h4>Administration</h4>
             <ul>
               <li>Point 1</li>
               <li>Point 2</li>

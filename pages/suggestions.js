@@ -24,7 +24,7 @@ const Suggestions = () => {
                   <span>Specialization: </span>
                   <span className={styles.tag}>Kindergarten</span>
                   <span className={styles.tag}>Apartment</span>
-                  <span className={styles.tag}>Legal Help</span>
+                  <span className={styles.tag}>Administration</span>
                 </p>
 
                 <span className={styles.cost}>Cost: ~1k€</span>
