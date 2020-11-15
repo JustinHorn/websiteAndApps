@@ -23,7 +23,7 @@ nav {
   background-color: #f8f9fa;
   width: 100vw;
   display: grid;
-  grid-template-columns: auto 1000px auto;
+  grid-template-columns: auto minmax(auto, 1000px) auto;
   text-align: left;
 }
 

@@ -9,6 +9,8 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
+import FormGroup from "@material-ui/core/FormGroup";
+import Checkbox from "@material-ui/core/Checkbox";
 
 import Button from "@material-ui/core/Button";
 
@@ -50,23 +52,29 @@ const Form = () => {
         </div>
         <h2>Which services do you need?</h2>
         <div>
-          <FormControlLabel
-            value="Kindergarten"
-            control={<Radio />}
-            label="Kindergarten"
-          />
-          <FormControlLabel value="Job" control={<Radio />} label="Job" />
-          <FormControlLabel
-            value="Apartment"
-            control={<Radio />}
-            label="Apartment"
-          />
+          <FormGroup row>
+            <FormControlLabel
+              value="Kindergarten"
+              control={<Checkbox name="checkedD" color="primary" />}
+              label="Kindergarten"
+            />
+            <FormControlLabel
+              value="Job"
+              control={<Checkbox name="checkedD" color="primary" />}
+              label="Job"
+            />
+            <FormControlLabel
+              value="Apartment"
+              control={<Checkbox name="checkedD" color="primary" />}
+              label="Apartment"
+            />
 
-          <FormControlLabel
-            value="Legal help"
-            control={<Radio />}
-            label="Legal help"
-          />
+            <FormControlLabel
+              value="Legal help"
+              control={<Checkbox name="checkedD" color="primary" />}
+              label="Legal help"
+            />
+          </FormGroup>
         </div>
       </section>
       <Link href="/suggestions">
