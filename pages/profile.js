@@ -1,4 +1,5 @@
 import styles from "styles/Profile.module.css";
+import Head from "next/head";
 
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
@@ -7,6 +8,9 @@ import CardContent from "@material-ui/core/CardContent";
 const Profile = () => {
   return (
     <main className={styles.page}>
+      <Head>
+        <title>Profile</title>
+      </Head>
       <h2>Agency XY</h2>
       <img src="images/heimat.JPG" alt="" />
 

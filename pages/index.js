@@ -7,6 +7,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className={styles.center}>
+      <Head>
+        <title>HYMT</title>
+      </Head>
       <div className={styles.intro}>
         <div className={styles.img4x4grid}>
           <img src="images/curiosity.webp" />

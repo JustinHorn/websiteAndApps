@@ -17,6 +17,10 @@
   width: fit-content;
 }
 
+.card {
+  margin: 20px;
+}
+
 .card ul {
   margin-left: 0;
   padding-left: 20px;

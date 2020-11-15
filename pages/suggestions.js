@@ -1,4 +1,5 @@
 import styles from "styles/Suggestions.module.css";
+import Head from "next/head";
 
 import Link from "next/link";
 
@@ -10,6 +11,9 @@ import Button from "@material-ui/core/Button";
 const Suggestions = () => {
   return (
     <main className={styles.page}>
+      <Head>
+        <title>Suggestions</title>
+      </Head>
       <div>
         {[1, 2, 3, 4, 5].map(() => (
           <Card className={styles.card}>
