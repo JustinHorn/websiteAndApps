@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/hymt.webp" />
+        <link rel="icon" href="/hymt.PNG" />
       </Head>
 
       <nav>

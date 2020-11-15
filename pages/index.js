@@ -12,10 +12,10 @@ export default function Home() {
       </Head>
       <div className={styles.intro}>
         <div className={styles.img4x4grid}>
-          <img src="images/curiosity.webp" />
-          <img src="images/trust.webp" />
-          <img src="images/education.webp" />
-          <img src="images/help.webp" />
+          <img src="images/curiosity.png" />
+          <img src="images/trust.png" />
+          <img src="images/education.png" />
+          <img src="images/help.png" />
         </div>
         <aside>
           <h3 className="spaced">

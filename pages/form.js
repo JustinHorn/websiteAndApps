@@ -37,7 +37,7 @@ const Form = () => {
           <Autocomplete
             multiple
             id="combo-box-demo"
-            options={["Deutsch", "English", "Spanish"]}
+            options={["Deutsch", "English", "Español"]}
             defaultValue={[]}
             style={{ width: 300 }}
             filterSelectedOptions

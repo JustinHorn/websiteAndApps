@@ -35,6 +35,9 @@
   .cost {
     font-size: 0.9rem;
   }
+  .card {
+    margin: 1px;
+  }
 }
 
 .rating {
