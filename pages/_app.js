@@ -17,9 +17,13 @@ function MyApp({ Component, pageProps }) {
       <nav>
         <br />
         <div className={"content"}>
-          <Link href="/">
-            <h1 id="join">Home</h1>
-          </Link>
+          <div>
+            <Link href="/">
+              <Button size="small" variant="outlined">
+                <h1 id="join">Home</h1>
+              </Button>
+            </Link>
+          </div>
           <div id="navbutton">
             <Button size="sm" variant="outlined" color="secondary">
               I am an Agency
