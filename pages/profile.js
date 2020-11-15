@@ -11,8 +11,8 @@ const Profile = () => {
       <Head>
         <title>Profile</title>
       </Head>
-      <h2>Agency XY</h2>
-      <img src="images/heimat.JPG" alt="" />
+      <h2>New Home Agency</h2>
+      <img src="images/relocation-agency.jpg" alt="" />
 
       <div className={styles.rating}>
         <h5>Rating 9/10</h5>
@@ -23,19 +23,15 @@ const Profile = () => {
         </div>
       </div>
       <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum."
+        We have been in this field for over 15 years. We ourselves himself had
+        the bitter experience of moving from abroad without professional help
+        when he moved back to Germany in 2000.
       </p>
 
       <div className="flex">
         <Card className={styles.card}>
           <CardContent>
-            <h4>Tier 1</h4>
+            <h4>Kindergarten</h4>
             <ul>
               <li>Point 1</li>
               <li>Point 2</li>
@@ -47,7 +43,7 @@ const Profile = () => {
         </Card>
         <Card className={styles.card}>
           <CardContent>
-            <h4>Tier 2</h4>
+            <h4>Apartment</h4>
             <ul>
               <li>Point 1</li>
               <li>Point 2</li>
@@ -59,7 +55,7 @@ const Profile = () => {
         </Card>
         <Card className={styles.card}>
           <CardContent>
-            <h4>Tier 3</h4>
+            <h4>Legal Help</h4>
             <ul>
               <li>Point 1</li>
               <li>Point 2</li>

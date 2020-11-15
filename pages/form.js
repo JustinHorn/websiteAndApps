@@ -61,7 +61,7 @@ const Form = () => {
             <FormControlLabel
               value="Job"
               control={<Checkbox name="checkedD" color="primary" />}
-              label="Job"
+              label="Admission"
             />
             <FormControlLabel
               value="Apartment"
