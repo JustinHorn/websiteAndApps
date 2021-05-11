@@ -1,38 +1,41 @@
 .App {
   text-align: center;
+  display: grid;
+  place-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --cell-side-length: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
+  width: fit-content;
+}
+
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: fit-content;
 }
 
-.App-link {
-  color: #61dafb;
+.cell {
+  width: var(--cell-side-length);
+  height: var(--cell-side-length);
+  background-color: grey;
+  margin: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.food {
+  background-color: red;
+}
+
+.snake {
+  background-color: green;
+}
+
+.snakeHead {
+  background-color: greenyellow;
 }
