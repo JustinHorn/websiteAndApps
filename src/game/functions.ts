@@ -52,13 +52,9 @@ export const moveSnake = (
   let newSnake: { r: number; c: number }[] = [];
 
   if (headOnFood) {
-    const freeTiles = TILES.filter(
-      (tr, tc) => !snake.some((sr, sc) => sr === tr && tc === sc)
-    );
-
     newSnake = [newHead, ...snake];
     const gameOver = isSnake(newHead.r, newHead.c);
-    const newFood = freeTiles[Math.floor(freeTiles.length * Math.random())];
+    const newFood = nextFood(newSnake, TILES);
 
     return { newFood, newSnake, gameOver };
   }
@@ -78,4 +74,12 @@ export const moveSnake = (
   );
 
   return { newSnake, newFood: food, gameOver };
+};
+
+export const nextFood = (snake: Snake, TILES: Tile[]) => {
+  const freeTiles = TILES.filter(
+    (tr, tc) => !snake.some((sr, sc) => sr === tr && tc === sc)
+  );
+  const newFood = freeTiles[Math.floor(freeTiles.length * Math.random())];
+  return newFood;
 };

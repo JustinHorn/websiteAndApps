@@ -1,5 +1,10 @@
-import { Direction, MOVE_TIME } from 'game/constants';
-import { getLeftDirection, getRightDirection, moveSnake } from 'game/functions';
+import { Direction, MOVE_TIME, TILES } from 'game/constants';
+import {
+  getLeftDirection,
+  getRightDirection,
+  moveSnake,
+  nextFood,
+} from 'game/functions';
 import { useEffect, useState } from 'react';
 
 const useGameHook = () => {
@@ -16,6 +21,7 @@ const useGameHook = () => {
     clearInterval(interval);
 
     const code = event.code;
+    console.log(code);
     let nextDirection = snakeDirection;
     if (code === 'KeyA' || code === 'ArrowLeft') {
       nextDirection = getLeftDirection(snakeDirection);
@@ -59,7 +65,16 @@ const useGameHook = () => {
     }
   }, [gameOver]);
 
-  return { snake, gameOver, snakeHead, food };
+  const restart = () => {
+    setGameOver(false);
+
+    const snake = [{ r: 0, c: 0 }];
+    setSnake(snake);
+
+    setFood(nextFood(snake, TILES));
+  };
+
+  return { snake, gameOver, snakeHead, food, restart };
 };
 
 export default useGameHook;
