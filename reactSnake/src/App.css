@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+:root {
+  --cell-side-length: 40px;
+}
+
+main {
+  text-align: left;
+}
+
+.nav {
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+  width: fit-content;
+}
+
+.cell {
+  width: var(--cell-side-length);
+  height: var(--cell-side-length);
+  background-color: grey;
+  margin: 1px;
+}
+
+.food {
+  background-color: red;
+}
+
+.snake {
+  background-color: green;
+}
+
+.snakeHead {
+  background-color: greenyellow;
+}
